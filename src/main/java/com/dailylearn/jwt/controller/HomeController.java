@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-
     @Autowired
     private JWTUtility jwtUtility;
 
@@ -27,7 +26,7 @@ public class HomeController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home() {
         return "Welcome to Daily Learn!!";
     }
@@ -51,6 +50,5 @@ public class HomeController {
 
         return new JwtResponse(token);
     }
-
 
 }
